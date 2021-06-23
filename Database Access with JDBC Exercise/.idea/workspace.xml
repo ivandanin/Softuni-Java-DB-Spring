@@ -2,17 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa73536e-2aaa-4b9e-b56c-a6638ad57c44" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_8_0_25.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Database Access with JDBC Exercise.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBAccessWithJDBCExercise.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Minions.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/minions_db.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Database Access with JDBC/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Database Access with JDBC/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Database Access with JDBC Exercise/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Minions_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Minions_02.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jdbc/jdbc.iml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,9 +41,16 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager">
-    <configuration name="Minions_1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Minions_1" />
+  <component name="RunManager" selected="Application.Minions_03">
+    <configuration name="Minions_02" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Minions_02" />
+      <module name="Database Access with JDBC Exercise" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Minions_03" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Minions_03" />
       <module name="Database Access with JDBC Exercise" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -68,7 +69,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Minions_1" />
+        <item itemvalue="Application.Minions_03" />
+        <item itemvalue="Application.Minions_02" />
       </list>
     </recent_temporary>
   </component>
@@ -80,7 +82,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1624468435088</updated>
-      <workItem from="1624468436282" duration="6604000" />
+      <workItem from="1624468436282" duration="10167000" />
     </task>
     <servers />
   </component>

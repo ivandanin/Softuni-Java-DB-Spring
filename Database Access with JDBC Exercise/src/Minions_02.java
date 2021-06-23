@@ -4,7 +4,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Properties;
 
-public class Minions_1 {
+public class Minions_02 {
     public static void main(String[] args) {
 
         try {
