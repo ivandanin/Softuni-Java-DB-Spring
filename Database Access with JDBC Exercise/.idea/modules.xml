@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/DBAccessWithJDBCExercise.iml" filepath="$PROJECT_DIR$/DBAccessWithJDBCExercise.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Database Access with JDBC Exercise.iml" filepath="$PROJECT_DIR$/Database Access with JDBC Exercise.iml" />
     </modules>
   </component>
 </project>

@@ -10,7 +10,7 @@ public class Main {
         try {
             Properties properties = new Properties();
             properties.setProperty("user", "root");
-            properties.setProperty("password", /// TODO: 6/23/2021 Enter pass );
+            properties.setProperty("password",  "root");
 
             Connection connection = DriverManager.getConnection
                     ("jdbc:mysql://localhost:3306/soft_uni", properties);
