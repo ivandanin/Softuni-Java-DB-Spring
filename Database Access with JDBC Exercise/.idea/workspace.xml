@@ -2,14 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa73536e-2aaa-4b9e-b56c-a6638ad57c44" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5641f610-e047-4784-b3df-858738d6dd36.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5641f610-e047-4784-b3df-858738d6dd36/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5641f610-e047-4784-b3df-858738d6dd36/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5641f610-e047-4784-b3df-858738d6dd36/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5641f610-e047-4784-b3df-858738d6dd36/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Database Access with JDBC Exercise/Minions_03.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Database Access with JDBC Exercise/Minions_03.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Minions_03.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Minions_03.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../jdbc/jdbc.iml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -104,7 +96,7 @@
       <updated>1624468435088</updated>
       <workItem from="1624468436282" duration="10370000" />
       <workItem from="1624518655690" duration="3199000" />
-      <workItem from="1624532509003" duration="4705000" />
+      <workItem from="1624532509003" duration="4743000" />
     </task>
     <servers />
   </component>
