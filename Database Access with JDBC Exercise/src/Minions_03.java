@@ -36,11 +36,10 @@ public class Minions_03 {
         while (resultSet.next()) {
             System.out.printf("%d. %s %d%n", ++counter, resultSet.getString("name"),
                 resultSet.getInt("age"));
-
-
-
         }
-
+        if (!resultSet.isAfterLast()) {
+            System.out.printf("No villain with ID %d exists in the database.", villainId);
+        }
         } catch (Exception e) {
             e.printStackTrace();
         }

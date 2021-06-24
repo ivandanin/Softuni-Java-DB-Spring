@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa73536e-2aaa-4b9e-b56c-a6638ad57c44" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5641f610-e047-4784-b3df-858738d6dd36.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5641f610-e047-4784-b3df-858738d6dd36/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5641f610-e047-4784-b3df-858738d6dd36/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5641f610-e047-4784-b3df-858738d6dd36/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5641f610-e047-4784-b3df-858738d6dd36/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Database Access with JDBC Exercise/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Minions_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Minions_02.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Database Access with JDBC Exercise/Minions_03.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Database Access with JDBC Exercise/Minions_03.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Minions_03.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Minions_03.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../jdbc/jdbc.iml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,7 +45,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="Application.Minions_03">
+  <component name="RunManager" selected="Application.Minions_5">
     <configuration name="Minions_02" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Minions_02" />
       <module name="Database Access with JDBC Exercise" />
@@ -51,6 +55,20 @@
     </configuration>
     <configuration name="Minions_03" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Minions_03" />
+      <module name="Database Access with JDBC Exercise" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Minions_04" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Minions_04" />
+      <module name="Database Access with JDBC Exercise" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Minions_5" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Minions_5" />
       <module name="Database Access with JDBC Exercise" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -69,6 +87,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Minions_5" />
+        <item itemvalue="Application.Minions_04" />
         <item itemvalue="Application.Minions_03" />
         <item itemvalue="Application.Minions_02" />
       </list>
@@ -82,7 +102,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1624468435088</updated>
-      <workItem from="1624468436282" duration="10167000" />
+      <workItem from="1624468436282" duration="10370000" />
+      <workItem from="1624518655690" duration="3199000" />
+      <workItem from="1624532509003" duration="4705000" />
     </task>
     <servers />
   </component>
@@ -99,5 +121,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
