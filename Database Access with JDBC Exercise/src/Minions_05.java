@@ -5,7 +5,7 @@ import java.sql.ResultSet;
 import java.util.Properties;
 import java.util.Scanner;
 
-public class Minions_5 {
+public class Minions_05 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -13,7 +13,7 @@ public class Minions_5 {
 
             Properties properties = new Properties();
             properties.setProperty("user", "root");
-            properties.setProperty("password", "root"); /// TODO: 6/23/2021 Enter pass
+            properties.setProperty("password", "root");
 
             Connection connection = DriverManager.getConnection
                     ("jdbc:mysql://localhost:3306/minions_db", properties);
