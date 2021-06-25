@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa73536e-2aaa-4b9e-b56c-a6638ad57c44" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d768054b-d619-4d36-97d5-c6f3224388dd.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d768054b-d619-4d36-97d5-c6f3224388dd.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Minions_5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Minions_05.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,14 +46,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="Application.Minions_07">
-    <configuration name="Minions_02" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Minions_02" />
-      <module name="Database Access with JDBC Exercise" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.Minions_08">
     <configuration name="Minions_03" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Minions_03" />
       <module name="Database Access with JDBC Exercise" />
@@ -83,6 +75,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Minions_08" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Minions_08" />
+      <module name="Database Access with JDBC Exercise" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -98,11 +97,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Minions_08" />
         <item itemvalue="Application.Minions_07" />
         <item itemvalue="Application.Minions_05" />
         <item itemvalue="Application.Minions_04" />
         <item itemvalue="Application.Minions_03" />
-        <item itemvalue="Application.Minions_02" />
       </list>
     </recent_temporary>
   </component>
@@ -117,7 +116,7 @@
       <workItem from="1624468436282" duration="10370000" />
       <workItem from="1624518655690" duration="3199000" />
       <workItem from="1624532509003" duration="4743000" />
-      <workItem from="1624615216315" duration="1036000" />
+      <workItem from="1624615216315" duration="3877000" />
     </task>
     <servers />
   </component>
