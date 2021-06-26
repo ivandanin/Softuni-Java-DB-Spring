@@ -2,7 +2,7 @@ import java.sql.*;
 import java.util.Properties;
 import java.util.Scanner;
 
-public class Minions_08 {
+public class Minions_09 {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
@@ -19,10 +19,6 @@ public class Minions_08 {
             CallableStatement callableStatement = connection.prepareCall("CALL usp_get_older(?)");
             callableStatement.setInt(1, id);
             callableStatement.executeUpdate();
-
-            PreparedStatement preparedStatementUpdate = connection.prepareStatement("UPDATE minions SET name = LOWER(name) WHERE id = ?");
-            preparedStatementUpdate.setInt(1, id);
-            preparedStatementUpdate.executeUpdate();
 
             PreparedStatement preparedStatement = connection.
                     prepareStatement("SELECT name, age FROM minions WHERE id = ?;");
