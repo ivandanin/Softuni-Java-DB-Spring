@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa73536e-2aaa-4b9e-b56c-a6638ad57c44" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d768054b-d619-4d36-97d5-c6f3224388dd.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d768054b-d619-4d36-97d5-c6f3224388dd.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Database Access with JDBC Exercise/Minions_08.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Database Access with JDBC Exercise/Minions_08.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,14 +49,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="Application.Minions_08">
-    <configuration name="Minions_03" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Minions_03" />
-      <module name="Database Access with JDBC Exercise" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.Minions_06">
     <configuration name="Minions_04" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Minions_04" />
       <module name="Database Access with JDBC Exercise" />
@@ -63,6 +59,13 @@
     </configuration>
     <configuration name="Minions_05" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Minions_05" />
+      <module name="Database Access with JDBC Exercise" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Minions_06" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Minions_06" />
       <module name="Database Access with JDBC Exercise" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -82,26 +85,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Minions_06" />
         <item itemvalue="Application.Minions_08" />
         <item itemvalue="Application.Minions_07" />
         <item itemvalue="Application.Minions_05" />
         <item itemvalue="Application.Minions_04" />
-        <item itemvalue="Application.Minions_03" />
       </list>
     </recent_temporary>
   </component>
@@ -116,7 +117,8 @@
       <workItem from="1624468436282" duration="10370000" />
       <workItem from="1624518655690" duration="3199000" />
       <workItem from="1624532509003" duration="4743000" />
-      <workItem from="1624615216315" duration="3877000" />
+      <workItem from="1624615216315" duration="5124000" />
+      <workItem from="1624689792675" duration="10493000" />
     </task>
     <servers />
   </component>
@@ -134,5 +136,19 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Minions_06.java</url>
+          <line>41</line>
+          <properties class="Minions_06" method="findVillainById">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
