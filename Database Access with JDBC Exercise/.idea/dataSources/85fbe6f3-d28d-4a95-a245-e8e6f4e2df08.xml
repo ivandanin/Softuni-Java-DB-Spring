@@ -980,7 +980,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     <table id="287" parent="4" name="towns"/>
     <table id="288" parent="4" name="villains"/>
     <routine id="289" parent="4" name="usp_get_older">
-      <SourceTextLength>84</SourceTextLength>
+      <SourceTextLength>76</SourceTextLength>
       <Definer>root@localhost</Definer>
       <RoutineKind>procedure</RoutineKind>
     </routine>
