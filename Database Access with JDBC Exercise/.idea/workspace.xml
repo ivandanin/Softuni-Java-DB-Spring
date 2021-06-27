@@ -2,10 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa73536e-2aaa-4b9e-b56c-a6638ad57c44" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/85fbe6f3-d28d-4a95-a245-e8e6f4e2df08.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/85fbe6f3-d28d-4a95-a245-e8e6f4e2df08.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/85fbe6f3-d28d-4a95-a245-e8e6f4e2df08/storage_v2/_src_/schema/minions_db.QAU07A.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/85fbe6f3-d28d-4a95-a245-e8e6f4e2df08/storage_v2/_src_/schema/minions_db.QAU07A.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3b53e20f-e847-4ac2-8216-9ddd2c3516ea.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3b53e20f-e847-4ac2-8216-9ddd2c3516ea/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3b53e20f-e847-4ac2-8216-9ddd2c3516ea/storage_v2/_src_/schema/minions_db.QAU07A.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3b53e20f-e847-4ac2-8216-9ddd2c3516ea/storage_v2/_src_/schema/minions_db.QAU07A.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3b53e20f-e847-4ac2-8216-9ddd2c3516ea/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3b53e20f-e847-4ac2-8216-9ddd2c3516ea/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3b53e20f-e847-4ac2-8216-9ddd2c3516ea/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5ed3ae07-f07f-4af8-8ac3-415da6f6cb7f.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5ed3ae07-f07f-4af8-8ac3-415da6f6cb7f/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5ed3ae07-f07f-4af8-8ac3-415da6f6cb7f/storage_v2/_src_/schema/minions_db.QAU07A.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5ed3ae07-f07f-4af8-8ac3-415da6f6cb7f/storage_v2/_src_/schema/minions_db.QAU07A.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5ed3ae07-f07f-4af8-8ac3-415da6f6cb7f/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5ed3ae07-f07f-4af8-8ac3-415da6f6cb7f/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5ed3ae07-f07f-4af8-8ac3-415da6f6cb7f/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d768054b-d619-4d36-97d5-c6f3224388dd.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d768054b-d619-4d36-97d5-c6f3224388dd/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d768054b-d619-4d36-97d5-c6f3224388dd/storage_v2/_src_/schema/minions_db.QAU07A.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d768054b-d619-4d36-97d5-c6f3224388dd/storage_v2/_src_/schema/minions_db.QAU07A.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d768054b-d619-4d36-97d5-c6f3224388dd/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d768054b-d619-4d36-97d5-c6f3224388dd/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d768054b-d619-4d36-97d5-c6f3224388dd/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Database Access with JDBC Exercise/Minions_08.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Database Access with JDBC Exercise/Minions_08.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,17 +102,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Minions_09" />
@@ -117,7 +124,8 @@
       <workItem from="1624518655690" duration="3199000" />
       <workItem from="1624532509003" duration="4743000" />
       <workItem from="1624615216315" duration="5124000" />
-      <workItem from="1624689792675" duration="12571000" />
+      <workItem from="1624689792675" duration="13129000" />
+      <workItem from="1624782538917" duration="151000" />
     </task>
     <servers />
   </component>
