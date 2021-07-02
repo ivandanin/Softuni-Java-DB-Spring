@@ -72,9 +72,11 @@ public static void addNewAddress() {
                 .setParameter("l_name", lastName)
                 .getSingleResult();
 
-       createAddress("Vitoshka 16");
+       Address address = createAddress("Vitoshka 16");
 
-
+       entityManager.getTransaction().begin();
+       employee.setAddress(address);
+       entityManager.getTransaction().commit();
 }
 
     private static Address createAddress(String addressText) {
