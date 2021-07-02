@@ -1,3 +1,5 @@
+import entities.Address;
+import entities.Department;
 import entities.Employee;
 
 import javax.persistence.EntityManager;
@@ -16,11 +18,9 @@ public class Main {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("soft_uni");
         entityManager = emf.createEntityManager();
 
-        changeCasing();
-        containsEmployee();
-        salaryAbove();
+        addNewAddress();
 
-}
+    }
 public static void changeCasing() {
     entityManager.getTransaction().begin();
     Query query = entityManager.createQuery("UPDATE Town t " +
@@ -51,4 +51,40 @@ public static void salaryAbove() {
         System.out.println(employee.getFirstName());
     }
 }
+public static void departmentSearch() {
+    scanner = new Scanner(System.in);
+    List<Employee> employeeList = entityManager.createQuery("SELECT e FROM Employee e " +
+            "WHERE e.department.name = :d_name " +
+            "ORDER BY e.salary, e.id ", Employee.class)
+            .setParameter("d_name", "Research and Development")
+            .getResultList();
+    for (Employee employee : employeeList) {
+        System.out.printf("%s %s from %s - $%.2f%n",employee.getFirstName(), employee.getLastName(),
+                employee.getDepartment(), employee.getSalary());
+    }
+}
+public static void addNewAddress() {
+        scanner = new Scanner(System.in);
+        String lastName = scanner.nextLine();
+
+        Employee employee = entityManager.createQuery("SELECT e FROM Employee e " +
+                "WHERE e.lastName = :l_name ", Employee.class)
+                .setParameter("l_name", lastName)
+                .getSingleResult();
+
+       createAddress("Vitoshka 16");
+
+
+}
+
+    private static Address createAddress(String addressText) {
+        Address address = new Address();
+        address.setText(addressText);
+
+        entityManager.getTransaction().begin();
+        entityManager.persist(address);
+        entityManager.getTransaction().commit();
+
+        return address;
+    }
 }
