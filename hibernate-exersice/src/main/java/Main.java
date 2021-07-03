@@ -18,8 +18,7 @@ public class Main {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("soft_uni");
         entityManager = emf.createEntityManager();
 
-        addNewAddress();
-
+getEmployeeAddress();
     }
 public static void changeCasing() {
     entityManager.getTransaction().begin();
@@ -88,5 +87,19 @@ public static void addNewAddress() {
         entityManager.getTransaction().commit();
 
         return address;
+    }
+    public static void getEmployeeAddress() {
+        List<Address> addressList = entityManager.createQuery("SELECT a FROM Address a " +
+                "ORDER BY a.employees.size DESC ", Address.class)
+                .setMaxResults(10)
+                .getResultList();
+
+        addressList.forEach(address -> {
+            System.out.printf("%s, %s - %d employees%n",
+                    address.getText(),
+                    address.getTown() == null
+            ? "Unknown" : address.getTown().getName(),
+                    address.getEmployees().size());
+        });
     }
 }
