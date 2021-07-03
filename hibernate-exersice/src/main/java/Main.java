@@ -1,11 +1,12 @@
 import entities.Address;
-import entities.Department;
 import entities.Employee;
+import entities.Project;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
 
@@ -18,7 +19,7 @@ public class Main {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("soft_uni");
         entityManager = emf.createEntityManager();
 
-getEmployeeAddress();
+getLastProjects();
     }
 public static void changeCasing() {
     entityManager.getTransaction().begin();
@@ -101,5 +102,33 @@ public static void addNewAddress() {
             ? "Unknown" : address.getTown().getName(),
                     address.getEmployees().size());
         });
+    }
+    public static void getEmployeeWithProject() {
+        scanner = new Scanner(System.in);
+        System.out.println("Enter valid employee id");
+        int id = Integer.parseInt(scanner.nextLine());
+
+        Employee employee = entityManager.find(Employee.class, id);
+        System.out.printf("%s %s - %s%n", employee.getFirstName(),
+                employee.getLastName(), employee.getDepartment());
+        employee.getProjects()
+                .stream().sorted(Comparator.comparing(Project::getName))
+                .forEach(p -> {
+                    System.out.printf("\t%s%n", p.getName());
+                });
+    }
+    public static void getLastProjects() {
+        entityManager.createQuery("SELECT p FROM Project p " +
+                "ORDER BY p.startDate DESC", Project.class)
+                .setMaxResults(10)
+                .getResultStream().sorted(Comparator.comparing(Project::getName))
+                .forEach(project -> {
+                    System.out.printf("Project name: %s%n\tProject Description: %s%n" +
+                            "\tProject Start Date: %s%n\tProject End Date: %s%n",
+                            project.getName(),
+                            project.getDescription(),
+                            project.getStartDate(),
+                            project.getEndDate());
+                });
     }
 }
