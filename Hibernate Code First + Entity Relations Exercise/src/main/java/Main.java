@@ -1,4 +1,3 @@
-import javax.persistence.Entity;
 import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
 
