@@ -5,11 +5,13 @@ import entities.Account;
 import entities.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
 import services.AccountService;
 import services.UserService;
 
 import java.math.BigDecimal;
 
+@Component
 public class ConsoleRunner implements CommandLineRunner {
    @Autowired
    private UserService userService;
