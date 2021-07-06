@@ -39,4 +39,9 @@ public class CategoryServiceImpl implements CategoryService {
             this.categoryRepo.saveAndFlush(category);
         });
     }
+
+    @Override
+    public Category getCategoryById(Long id) {
+        return this.categoryRepo.getOne(id);
+    }
 }
