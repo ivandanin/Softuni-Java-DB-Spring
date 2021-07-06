@@ -26,7 +26,6 @@ public class FileUtilImpl implements FileUtil {
             }
         }
 
-
         return result.toArray(String[]::new);
     }
 }
