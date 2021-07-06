@@ -7,17 +7,15 @@ import java.util.Set;
 @Table(name = "categories")
 public class Category {
 
-    @Id
-    @GeneratedValue
     private Long id;
-
     private String name;
-
     private Set<Book> books;
 
     public Category() {
     }
 
+    @Id
+    @GeneratedValue
     @Column(name = "id")
     public Long getId() {
         return id;
@@ -27,7 +25,7 @@ public class Category {
         this.id = id;
     }
 
-    @Column(name = "name")
+    @Column(name = "name", nullable = false, unique = true)
     public String getName() {
         return name;
     }

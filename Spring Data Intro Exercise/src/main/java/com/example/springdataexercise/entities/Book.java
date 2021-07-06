@@ -1,42 +1,30 @@
 package com.example.springdataexercise.entities;
-
-import org.springframework.lang.NonNull;
-
 import javax.persistence.*;
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.Set;
 
 @Entity
 @Table(name = "books")
 public class Book {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String title;
-
     private String description;
-
     private EditionType editionType;
-
     private BigDecimal price;
-
     private int copies;
-
-    private LocalDateTime releaseDate;
-
+    private LocalDate releaseDate;
     private AgeRestriction ageRestriction;
-
     private Set<Category> categories;
-
     private Author author;
 
     public Book() {
     }
 
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     public Long getId() {
         return id;
@@ -46,7 +34,7 @@ public class Book {
         this.id = id;
     }
 
-    @Column(name = "title")
+    @Column(name = "title", nullable = false)
     public String getTitle() {
         return title;
     }
@@ -55,7 +43,7 @@ public class Book {
         this.title = title;
     }
 
-    @Column(name = "description")
+    @Column(name = "description", length = 1000)
     public String getDescription() {
         return description;
     }
@@ -65,6 +53,7 @@ public class Book {
     }
 
     @Column(name = "editionType")
+    @Enumerated(EnumType.ORDINAL)
     public EditionType getEditionType() {
         return editionType;
     }
@@ -82,7 +71,7 @@ public class Book {
         this.price = price;
     }
 
-    @Column(name = "copies")
+    @Column(name = "copies", nullable = false)
     public int getCopies() {
         return copies;
     }
@@ -92,15 +81,16 @@ public class Book {
     }
 
     @Column(name = "release_date")
-    public LocalDateTime getReleaseDate() {
+    public LocalDate getReleaseDate() {
         return releaseDate;
     }
 
-    public void setReleasDate(LocalDateTime release_date) {
+    public void setReleaseDate(LocalDate release_date) {
         this.releaseDate = release_date;
     }
 
     @Column(name = "age_restriction")
+    @Enumerated(EnumType.ORDINAL)
     public AgeRestriction getAgeRestriction() {
         return ageRestriction;
     }

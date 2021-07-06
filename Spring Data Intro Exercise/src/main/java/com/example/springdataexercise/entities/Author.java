@@ -7,19 +7,16 @@ import java.util.Set;
 @Table(name = "authors")
 public class Author {
 
-    @Id
-    @GeneratedValue
     private Long id;
-
     private String firstName;
-
     private String lastName;
-
     private Set<Book> books;
 
     public Author() {
     }
 
+    @Id
+    @GeneratedValue
     @Column(name = "id")
     public Long getId() {
         return id;
