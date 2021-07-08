@@ -3,12 +3,12 @@ package com.example.springdataquering.entities;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 import java.util.Set;
 
-@Entity
+@Entity(name = "shampoos")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -19,7 +19,7 @@ public class Shampoo {
 
     private String brand;
 
-    private double price;
+    private BigDecimal price;
 
     @Enumerated(EnumType.ORDINAL)
     private Size size;
@@ -27,6 +27,7 @@ public class Shampoo {
     @ManyToOne
     private Label label;
 
-    private Set<Ingridient> ingridients;
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    private Set<Ingredient> ingredients;
 
 }

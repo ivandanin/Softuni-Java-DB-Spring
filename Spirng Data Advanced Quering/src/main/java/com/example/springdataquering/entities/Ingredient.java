@@ -5,22 +5,22 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 import java.util.Set;
 
 @Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Label {
+public class Ingredient {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String title;
+    private String name;
 
-    private String subtitle;
+    private BigDecimal price;
 
-    @OneToMany(mappedBy = "label")
+    @ManyToMany(mappedBy = "ingredients", fetch = FetchType.EAGER)
     private Set<Shampoo> shampoos;
-
 }
