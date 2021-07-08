@@ -6,9 +6,11 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.util.HashSet;
 import java.util.Set;
 
-@Entity(name = "shampoos")
+@Entity
+@Table(name = "shampoos")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -28,6 +30,6 @@ public class Shampoo {
     private Label label;
 
     @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    private Set<Ingredient> ingredients;
+    private Set<Ingredient> ingredients = new HashSet<>();
 
 }

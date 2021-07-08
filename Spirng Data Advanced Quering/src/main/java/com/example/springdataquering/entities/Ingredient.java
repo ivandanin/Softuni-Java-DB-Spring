@@ -6,12 +6,11 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
 public class Ingredient {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,5 +21,5 @@ public class Ingredient {
     private BigDecimal price;
 
     @ManyToMany(mappedBy = "ingredients", fetch = FetchType.EAGER)
-    private Set<Shampoo> shampoos;
+    private Set<Shampoo> shampoos = new HashSet<>();
 }

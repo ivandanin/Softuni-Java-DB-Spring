@@ -10,5 +10,5 @@ import java.util.List;
 
 @Repository
 public interface IngredientRepo extends JpaRepository<Ingredient, Long> {
-    List<Shampoo> findBySizeOrderById(String size);
+    List<Shampoo> findByNameIn(Iterable<String> names);
 }

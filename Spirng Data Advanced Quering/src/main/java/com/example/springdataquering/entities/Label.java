@@ -5,12 +5,11 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
 public class Label {
     @Id
     @GeneratedValue
@@ -21,6 +20,6 @@ public class Label {
     private String subtitle;
 
     @OneToMany(mappedBy = "label")
-    private Set<Shampoo> shampoos;
+    private Set<Shampoo> shampoos = new HashSet<>();
 
 }
