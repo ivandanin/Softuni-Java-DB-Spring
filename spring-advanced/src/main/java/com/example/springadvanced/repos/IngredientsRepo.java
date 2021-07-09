@@ -9,4 +9,5 @@ public interface IngredientsRepo extends JpaRepository<Ingredient, Long> {
     List<Ingredient> findByNameStartsWith(String letter);
 
     List<Ingredient> findByNameIn(List<String> names);
+
 }

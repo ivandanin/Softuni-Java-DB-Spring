@@ -19,7 +19,8 @@ public class AppInitializer implements CommandLineRunner {
 
     private final IngredientsRepo ingredientsRepo;
 
-    public AppInitializer(ShampooRepo shampooRepo, LabelRepo labelRepo, IngredientsRepo ingredientsRepo) {
+    public AppInitializer(ShampooRepo shampooRepo,
+                          LabelRepo labelRepo, IngredientsRepo ingredientsRepo) {
         this.shampooRepo = shampooRepo;
         this.labelRepo = labelRepo;
         this.ingredientsRepo = ingredientsRepo;
@@ -30,7 +31,8 @@ public class AppInitializer implements CommandLineRunner {
         printSeparator();
 
         // ex 1 - select shampoos by size
-        // shampooRepo.findBySizeOrderById(Size.MEDIUM).forEach(PrintUtil::printShampoo);
+        // shampooRepo.findBySizeOrderById(Size.MEDIUM)
+        // .forEach(PrintUtil::printShampoo);
         // printSeparator();
 
         // ex 2 - find shampoos by size or label
@@ -44,7 +46,8 @@ public class AppInitializer implements CommandLineRunner {
         // printSeparator();
 
         // ex 4 - select ingredient by name
-        // ingredientsRepo.findByNameStartsWith("M").forEach(PrintUtil::printIngredient);
+        // ingredientsRepo.findByNameStartsWith("M")
+        // .forEach(PrintUtil::printIngredient);
         // printSeparator();
 
         // ex 5 - select ingredients by names
@@ -58,7 +61,12 @@ public class AppInitializer implements CommandLineRunner {
         // printSeparator();
 
         // ex 7 - select shampoos by ingredients
-        shampooRepo.findByIngredientsIn(Set.of("Berry", "Mineral-Collagen")).forEach(PrintUtil::printShampoo);
+        //shampooRepo.findByIngredientsIn(Set.of("Berry", "Mineral-Collagen"))
+        // .forEach(PrintUtil::printShampoo);
+        //printSeparator();
+
+        // ex 8 - select shampoos by ingredients count
+        shampooRepo.findByCountOfIngredientsLessThan(2).forEach(PrintUtil::printShampoo);
         printSeparator();
 
     }
