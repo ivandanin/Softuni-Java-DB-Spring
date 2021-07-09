@@ -24,9 +24,15 @@ public class AppInitializer implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
+        printSeparator();
 
         // ex 1 - select shampoos by size
-       shampooRepo.findBySizeOrderById(Size.MEDIUM).forEach(PrintUtil::printShampoo);
+        shampooRepo.findBySizeOrderById(Size.MEDIUM).forEach(PrintUtil::printShampoo);
+        printSeparator();
+
+        // ex 2 - find shampoos by size or label
+        shampooRepo.findBySizeOrLabel(Size.MEDIUM, labelRepo.findByTitle("Anti-Dandruff").get(0))
+                .forEach(PrintUtil::printShampoo);
         printSeparator();
 
     }
