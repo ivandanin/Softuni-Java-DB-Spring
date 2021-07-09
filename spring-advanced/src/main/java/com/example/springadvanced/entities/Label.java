@@ -16,4 +16,36 @@ public class Label {
 
     @OneToMany(mappedBy = "label")
     private Set<Shampoo> shampoos = new HashSet<>();
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getSubtitle() {
+        return subtitle;
+    }
+
+    public void setSubtitle(String subtitle) {
+        this.subtitle = subtitle;
+    }
+
+    public Set<Shampoo> getShampoos() {
+        return shampoos;
+    }
+
+    public void setShampoos(Set<Shampoo> shampoos) {
+        this.shampoos = shampoos;
+    }
 }
