@@ -13,4 +13,9 @@ public class PrintUtil {
                 shampoo.getIngredients().stream().map(Ingredient::getName)
                 .collect(Collectors.joining(", ")));
     }
+
+    public static void printIngredient(Ingredient s) {
+        System.out.format("|%5d | %-30.30s | %8.2f |%n",
+                s.getId(), s.getName(), s.getPrice());
+    }
 }
