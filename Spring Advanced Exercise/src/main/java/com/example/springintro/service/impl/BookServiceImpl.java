@@ -89,6 +89,16 @@ public class BookServiceImpl implements BookService {
         return bookRepository.findAllByCopiesLessThan(5000);
     }
 
+    @Override
+    public List<Book> findAllByPriceLessThanAndPriceGreaterThan(BigDecimal lower, BigDecimal higher) {
+        return bookRepository.findAllByPriceLessThanAndPriceGreaterThan(new BigDecimal(5), new BigDecimal(40));
+    }
+
+    @Override
+    public List<Book> findAllByReleaseDateNot(LocalDate year) {
+        return bookRepository.findAllByReleaseDateNot(LocalDate.ofEpochDay(year.toEpochDay()));
+    }
+
 
     private Book createBookFromInfo(String[] bookInfo) {
         EditionType editionType = EditionType.values()[Integer.parseInt(bookInfo[0])];

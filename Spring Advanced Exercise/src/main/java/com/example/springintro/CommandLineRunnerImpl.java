@@ -9,6 +9,9 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
+import java.math.BigDecimal;
+import java.time.LocalDate;
+import java.time.Year;
 
 @Component
 public class CommandLineRunnerImpl implements CommandLineRunner {
@@ -32,10 +35,20 @@ public class CommandLineRunnerImpl implements CommandLineRunner {
         // printAllAuthorsAndNumberOfTheirBooks();
         // pritnALlBooksByAuthorNameOrderByReleaseDate("George", "Powell");
         // printAllBooksByAgeRestriction(AgeRestriction.TEEN);
-
-
+        //printBooksNotReleasedInYear(LocalDate.ofEpochDay(1998));
 
     }
+    private void printBooksNotReleasedInYear(LocalDate year){
+        bookService.findAllByReleaseDateNot(year).forEach(book ->
+                System.out.printf("%s%n", book.getTitle()));
+    }
+
+    private void printBooksWithPrice() {
+        bookService.findAllByPriceLessThanAndPriceGreaterThan(new BigDecimal(5), new BigDecimal(40))
+                .forEach(book -> System.out.printf("%s - %.2f%n", book.getTitle(), book.getPrice()));
+
+    }
+
     private void printGoldenTitles() {
         bookService.findAllByCopiesLessThan(5000).forEach(book ->
                 System.out.printf("%s%n", book.getTitle()));
