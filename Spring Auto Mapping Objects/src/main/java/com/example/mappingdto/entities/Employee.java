@@ -4,8 +4,8 @@ import com.example.mappingdto.entities.Address;
 import lombok.*;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -20,21 +20,26 @@ public class Employee {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NonNull
     @Column(name = "first_name")
     private String firstName;
 
+    @NonNull
     @Column(name = "last_name")
     private String lastName;
 
+    @NonNull
     private double salary;
 
-    private Date birthday;
+    @NonNull
+    private LocalDate birthday;
 
+    @NonNull
     @ManyToOne
     private Address address;
 
     @ManyToOne
-    @JoinColumn(name = "manager_id"m referencedColumnName = "id")
+    @JoinColumn(name = "manager_id", referencedColumnName = "id")
     private Employee manager;
 
     @OneToMany(mappedBy = "manager", fetch = FetchType.EAGER)

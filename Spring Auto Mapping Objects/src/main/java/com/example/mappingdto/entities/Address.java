@@ -1,9 +1,6 @@
 package com.example.mappingdto.entities;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -19,9 +16,10 @@ public class Address {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NonNull
     private String country;
-
+    @NonNull
     private String city;
-
+    @NonNull
     private String details;
 }

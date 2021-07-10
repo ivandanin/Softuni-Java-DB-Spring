@@ -9,9 +9,9 @@ public interface EmployeeService {
     List<Employee> getAllEmployees();
     List<Employee> getAllManagers();
     List<Employee> getAllEmployeesBornBefore(LocalDate toDate);
-    Employee getEmployeeById(Long id) throws Exception;
+    Employee getEmployeeById(Long id) ;
     Employee addEmployee(Employee employee);
-    Employee updateEmployee(Employee employee) throws Exception;
+    Employee updateEmployee(Employee employee) ;
     Employee deleteEmployee(Long id) throws Exception;
     Long getEmployeeCount();
 }

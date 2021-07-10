@@ -3,9 +3,12 @@ package com.example.mappingdto.service.impl;
 import com.example.mappingdto.entities.Address;
 import com.example.mappingdto.repos.AddressRepo;
 import com.example.mappingdto.service.AddressService;
+import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
+@Service
 public class AddressServiceImpl implements AddressService {
     private AddressRepo addressRepo;
 
@@ -30,18 +33,21 @@ public class AddressServiceImpl implements AddressService {
     }
 
     @Override
+    @Transactional
     public Address addAddress(Address address) {
         address.setId(null);
         return addressRepo.save(address);
     }
 
     @Override
+    @Transactional
     public Address updateAddress(Address address) throws Exception {
         getAddressById(address.getId());
         return addressRepo.save(address);
     }
 
     @Override
+    @Transactional
     public Address deleteAddress(Long id) throws Exception {
         Address removed = getAddressById(id);
         addressRepo.deleteById(id);
