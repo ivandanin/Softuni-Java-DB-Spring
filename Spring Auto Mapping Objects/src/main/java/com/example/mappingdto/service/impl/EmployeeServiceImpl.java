@@ -23,25 +23,16 @@ public class EmployeeServiceImpl implements EmployeeService {
         return employeeRepo.findAll();
     }
 
-    @Override
-    public List<Employee> getAllManagers() {
-        return null;
-    }
 
-    @Override
-    public List<Employee> getAllEmployeesBornBefore(LocalDate toDate) {
-        return null;
-    }
+     @Override
+     public List<Employee> getAllManagers() {
+         return employeeRepo.getManagers();
+     }
 
-    // @Override
-  // public List<Employee> getAllManagers() {
-  //     return employeeRepo.getManagers();
-  // }
-
-  // @Override
-  // public List<Employee> getAllEmployeesBornBefore(LocalDate toDate) {
-  //     return employeeRepo.findAllByBirthdayBefore(toDate);
-  // }
+     @Override
+     public List<Employee> getAllEmployeesBornBefore(LocalDate toDate) {
+         return employeeRepo.findAllByBirthdayBefore(toDate);
+     }
 
     @Override
     @Transactional

@@ -10,9 +10,11 @@ import java.util.List;
 public class ManagerDto {
     private String firstName;
     private String lastName;
-    private List<EmployeeDto> subordinates;
+    private String city;
+    private List<EmployeeDto> employees;
 
     private int getSubordinatesNumber() {
-        return subordinates.size();
+        return employees.size();
     }
+
 }

@@ -79,5 +79,25 @@ public class AppInitializer implements CommandLineRunner {
 
         List<Employee> updated = created.stream().map(employeeService::updateEmployee).collect(Collectors.toList());
 
+        TypeMap<Employee, ManagerDto> managerTypeMap = mapper.createTypeMap(Employee.class, ManagerDto.class)
+                .addMappings(m -> {
+                    m.map(Employee::getSubordinates, ManagerDto::setEmployees);
+                    m.map(src -> src.getAddress().getCity(), ManagerDto::setCity);
+                });
+        mapper.getTypeMap(Employee.class, EmployeeDto.class)
+                .addMapping(src -> src.getAddress(), EmployeeDto::setAddressCity);
+        mapper.validate();
+
+        List<Employee> managers = employeeService.getAllManagers();
+        List<ManagerDto> managerDtos = managers.stream().map(managerTypeMap::map).collect(Collectors.toList());
+
+        // 3. Projection
+
+        TypeMap employeeMap = mapper.getTypeMap(Employee.class, EmployeeDto.class)
+                .addMapping(src -> src.getManager().getLastName(), EmployeeDto::setLastName);
+
+        List<Employee> employeeBornBefore = employeeService
+                .getAllEmployeesBornBefore(LocalDate.of(1990, 1, 1));
+        employeeBornBefore.stream().map(employeeMap::map).forEach(System.out::println);
     }
 }
