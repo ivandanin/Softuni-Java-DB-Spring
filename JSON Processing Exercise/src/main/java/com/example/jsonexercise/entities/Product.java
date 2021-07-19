@@ -11,8 +11,8 @@ public class Product {
     private Long id;
     private String name;
     private BigDecimal price;
-    private Long buyerId;
-    private Long sellerId;
+    private User buyer;
+    private User seller;
     private Set<Category> categories;
 
     public Product() {
@@ -20,7 +20,6 @@ public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(nullable = false)
     public Long getId() {
         return id;
     }
@@ -29,7 +28,6 @@ public class Product {
         this.id = id;
     }
 
-    @Column(nullable = false)
     public String getName() {
         return name;
     }
@@ -38,7 +36,6 @@ public class Product {
         this.name = name;
     }
 
-    @Column(nullable = false)
     public BigDecimal getPrice() {
         return price;
     }
@@ -47,24 +44,26 @@ public class Product {
         this.price = price;
     }
 
-    public Long getBuyerId() {
-        return buyerId;
+    @ManyToOne
+    public User getBuyer() {
+        return buyer;
     }
 
-    public void setBuyerId(Long buyerId) {
-        this.buyerId = buyerId;
+    public void setBuyer(User buyer) {
+        this.buyer = buyer;
     }
 
-    @Column(nullable = false)
-    public Long getSellerId() {
-        return sellerId;
+    @ManyToOne
+    public User getSeller() {
+        return seller;
     }
 
-    public void setSellerId(Long sellerId) {
-        this.sellerId = sellerId;
+    public void setSeller(User seller) {
+        this.seller = seller;
     }
 
-    @OneToMany
+
+    @ManyToMany
     public Set<Category> getCategories() {
         return categories;
     }

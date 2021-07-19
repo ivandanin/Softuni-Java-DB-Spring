@@ -14,7 +14,6 @@ public class Category {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(nullable = false)
     public Long getId() {
         return id;
     }
@@ -23,7 +22,6 @@ public class Category {
         this.id = id;
     }
 
-    @Column(nullable = false)
     public String getName() {
         return name;
     }
