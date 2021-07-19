@@ -3,8 +3,6 @@ package com.example.jsonexercise.init;
 import com.example.jsonexercise.service.CategoryService;
 import org.springframework.boot.CommandLineRunner;
 
-import java.io.IOException;
-
 public class CommandRunner implements CommandLineRunner {
     private final CategoryService categoryService;
 
@@ -17,7 +15,7 @@ public class CommandRunner implements CommandLineRunner {
 
     }
 
-    private void seedData() throws IOException {
+    private void seedData() {
         categoryService.seedCategories();
     }
 }
