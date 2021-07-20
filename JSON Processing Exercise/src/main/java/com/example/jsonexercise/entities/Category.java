@@ -22,6 +22,7 @@ public class Category {
         this.id = id;
     }
 
+    @Column(length = 15, nullable = false, unique = true)
     public String getName() {
         return name;
     }
