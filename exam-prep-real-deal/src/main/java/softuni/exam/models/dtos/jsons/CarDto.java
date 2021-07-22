@@ -1,36 +1,25 @@
-package softuni.exam.models;
+package softuni.exam.models.dtos.jsons;
 
+import com.google.gson.annotations.Expose;
 import org.hibernate.validator.constraints.Length;
 
-import javax.persistence.*;
 import java.time.LocalDate;
-import java.util.Set;
 
-@Entity
-@Table(name = "cars")
-public class Car {
+public class CarDto {
 
-    private Integer id;
+    @Expose
     private String make;
+    @Expose
     private String model;
+    @Expose
     private Integer kilometers;
+    @Expose
     private LocalDate registeredOn;
-    private Set<Picture> pictures;
-    private Set<Offer> offers;
 
-    public Car() {
+    public CarDto() {
     }
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
+    @Length(min = 2, max = 20)
     public String getMake() {
         return make;
     }
@@ -39,6 +28,7 @@ public class Car {
         this.make = make;
     }
 
+    @Length(min = 2, max = 20)
     public String getModel() {
         return model;
     }
@@ -61,23 +51,5 @@ public class Car {
 
     public void setRegisteredOn(LocalDate registeredOn) {
         this.registeredOn = registeredOn;
-    }
-
-    @OneToMany(mappedBy = "car", fetch = FetchType.EAGER)
-    public Set<Picture> getPictures() {
-        return pictures;
-    }
-
-    public void setPictures(Set<Picture> pictures) {
-        this.pictures = pictures;
-    }
-
-    @OneToMany(mappedBy = "car")
-    public Set<Offer> getOffers() {
-        return offers;
-    }
-
-    public void setOffers(Set<Offer> offers) {
-        this.offers = offers;
     }
 }

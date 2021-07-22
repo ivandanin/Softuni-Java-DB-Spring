@@ -1,7 +1,5 @@
 package softuni.exam.models;
 
-import org.hibernate.validator.constraints.Length;
-
 import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.Set;
@@ -30,7 +28,6 @@ public class Picture {
     }
 
     @Column(unique = true)
-    @Length(min = 2, max = 20)
     public String getName() {
         return name;
     }
