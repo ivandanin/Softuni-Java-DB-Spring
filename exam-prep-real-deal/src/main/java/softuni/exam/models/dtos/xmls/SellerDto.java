@@ -1,34 +1,33 @@
-package softuni.exam.models;
+package softuni.exam.models.dtos.xmls;
 
 import org.hibernate.validator.constraints.Length;
 
-import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
-import java.util.Set;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 
-@Entity
-@Table(name = "sellers")
-public class Seller {
+@XmlRootElement(name = "seller")
+@XmlAccessorType(XmlAccessType.FIELD)
+public class SellerDto {
 
-    private Integer id;
+    @XmlElement(name = "first-name")
     private String firstName;
+
+    @XmlElement(name = "last-name")
     private String lastName;
+
+    @XmlElement
     private String email;
-    private Rating rating;
+    @XmlElement
+    private String rating;
+
+    @XmlElement
     private String town;
-    private Set<Offer> offers;
 
-    public Seller() {
-    }
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
+    public SellerDto() {
     }
 
     @Length(min = 2, max = 20)
@@ -49,7 +48,7 @@ public class Seller {
         this.lastName = lastName;
     }
 
-    @Column(unique = true)
+    @Pattern(regexp = "[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}")
     public String getEmail() {
         return email;
     }
@@ -58,31 +57,20 @@ public class Seller {
         this.email = email;
     }
 
-    @Column(nullable = false)
-    @Enumerated(value = EnumType.STRING)
-    public Rating getRating() {
+    public String getRating() {
         return rating;
     }
 
-    public void setRating(Rating rating) {
+    public void setRating(String rating) {
         this.rating = rating;
     }
 
-    @Column(nullable = false)
+    @NotNull
     public String getTown() {
         return town;
     }
 
     public void setTown(String town) {
         this.town = town;
-    }
-
-    @OneToMany(mappedBy = "seller")
-    public Set<Offer> getOffers() {
-        return offers;
-    }
-
-    public void setOffers(Set<Offer> offers) {
-        this.offers = offers;
     }
 }
