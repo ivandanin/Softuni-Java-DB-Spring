@@ -55,6 +55,7 @@ public class Car {
         this.kilometers = kilometers;
     }
 
+    @Column(name = "registered_on")
     public LocalDate getRegisteredOn() {
         return registeredOn;
     }

@@ -13,6 +13,7 @@ import softuni.exam.util.ValidationUtil;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.Set;
 
 @Service
 public class CarServiceImpl implements CarService {
@@ -65,6 +66,21 @@ public class CarServiceImpl implements CarService {
 
     @Override
     public String getCarsOrderByPicturesCountThenByMake() {
-        return null;
+        StringBuilder sb = new StringBuilder();
+
+
+        Set<Car> cars = this.carRepository.exportCars();
+        for (Car car : cars) {
+            sb.append(String.format("Car make - %s, model - %s",
+                    car.getMake(),car.getModel())).append(System.lineSeparator())
+            .append(String.format("\tKilometers - %s",
+                    car.getKilometers())).append(System.lineSeparator())
+            .append(String.format("\tRegistered on - %s",
+                    car.getRegisteredOn())).append(System.lineSeparator())
+            .append(String.format("\tNumber of pictures - %d",
+                    car.getPictures().size())).append(System.lineSeparator());
+        }
+
+        return sb.toString();
     }
 }
