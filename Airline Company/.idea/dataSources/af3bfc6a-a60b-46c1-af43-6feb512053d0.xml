@@ -1006,140 +1006,158 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Position>7</Position>
       <DataType>int|0s</DataType>
     </column>
-    <index id="295" parent="284" name="FKmhbbqusie1kllxpmde1fwmnby">
+    <index id="295" parent="284" name="UK_he2lxmd479lr1c8ox64s625gu">
+      <ColNames>email</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <index id="296" parent="284" name="FKmhbbqusie1kllxpmde1fwmnby">
       <ColNames>town_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="296" parent="284" name="PRIMARY">
+    <key id="297" parent="284" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="297" parent="284" name="FKmhbbqusie1kllxpmde1fwmnby">
+    <key id="298" parent="284" name="UK_he2lxmd479lr1c8ox64s625gu">
+      <ColNames>email</ColNames>
+      <UnderlyingIndexName>UK_he2lxmd479lr1c8ox64s625gu</UnderlyingIndexName>
+    </key>
+    <foreign-key id="299" parent="284" name="FKmhbbqusie1kllxpmde1fwmnby">
       <ColNames>town_id</ColNames>
       <RefTableName>towns</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="298" parent="285" name="id">
+    <column id="300" parent="285" name="id">
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="299" parent="285" name="airline">
+    <column id="301" parent="285" name="airline">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
     </column>
-    <column id="300" parent="285" name="capacity">
+    <column id="302" parent="285" name="capacity">
       <Position>3</Position>
       <DataType>int|0s</DataType>
     </column>
-    <column id="301" parent="285" name="register_number">
+    <column id="303" parent="285" name="register_number">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
     </column>
-    <key id="302" parent="285" name="PRIMARY">
+    <key id="304" parent="285" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="303" parent="286" name="id">
+    <column id="305" parent="286" name="id">
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="304" parent="286" name="price">
+    <column id="306" parent="286" name="price">
       <Position>2</Position>
       <DataType>decimal(19,2 digit)|0s</DataType>
     </column>
-    <column id="305" parent="286" name="serial_number">
+    <column id="307" parent="286" name="serial_number">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
     </column>
-    <column id="306" parent="286" name="take_off">
+    <column id="308" parent="286" name="take_off">
       <Position>4</Position>
       <DataType>datetime(6)|0s</DataType>
     </column>
-    <column id="307" parent="286" name="from_town_id">
+    <column id="309" parent="286" name="from_town_id">
       <Position>5</Position>
       <DataType>int|0s</DataType>
     </column>
-    <column id="308" parent="286" name="passenger_id">
+    <column id="310" parent="286" name="passenger_id">
       <Position>6</Position>
       <DataType>int|0s</DataType>
     </column>
-    <column id="309" parent="286" name="plane_id">
+    <column id="311" parent="286" name="plane_id">
       <Position>7</Position>
       <DataType>int|0s</DataType>
     </column>
-    <column id="310" parent="286" name="to_town_id">
+    <column id="312" parent="286" name="to_town_id">
       <Position>8</Position>
       <DataType>int|0s</DataType>
     </column>
-    <index id="311" parent="286" name="FK9akd43otylmohil8s0kdasr5p">
+    <index id="313" parent="286" name="FK9akd43otylmohil8s0kdasr5p">
       <ColNames>from_town_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="312" parent="286" name="FK1ds262xq345nkvs5o9ptnftwr">
+    <index id="314" parent="286" name="FK1ds262xq345nkvs5o9ptnftwr">
       <ColNames>passenger_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="313" parent="286" name="FKcswb13x4rmmf3vmy21dl6b0kl">
+    <index id="315" parent="286" name="FKcswb13x4rmmf3vmy21dl6b0kl">
       <ColNames>plane_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="314" parent="286" name="FK61o9lst1qyudwtubjp9b85vtp">
+    <index id="316" parent="286" name="FK61o9lst1qyudwtubjp9b85vtp">
       <ColNames>to_town_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="315" parent="286" name="PRIMARY">
+    <key id="317" parent="286" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="316" parent="286" name="FK9akd43otylmohil8s0kdasr5p">
+    <foreign-key id="318" parent="286" name="FK9akd43otylmohil8s0kdasr5p">
       <ColNames>from_town_id</ColNames>
       <RefTableName>towns</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="317" parent="286" name="FK1ds262xq345nkvs5o9ptnftwr">
+    <foreign-key id="319" parent="286" name="FK1ds262xq345nkvs5o9ptnftwr">
       <ColNames>passenger_id</ColNames>
       <RefTableName>passengers</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="318" parent="286" name="FKcswb13x4rmmf3vmy21dl6b0kl">
+    <foreign-key id="320" parent="286" name="FKcswb13x4rmmf3vmy21dl6b0kl">
       <ColNames>plane_id</ColNames>
       <RefTableName>planes</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="319" parent="286" name="FK61o9lst1qyudwtubjp9b85vtp">
+    <foreign-key id="321" parent="286" name="FK61o9lst1qyudwtubjp9b85vtp">
       <ColNames>to_town_id</ColNames>
       <RefTableName>towns</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="320" parent="287" name="id">
+    <column id="322" parent="287" name="id">
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="321" parent="287" name="guide">
+    <column id="323" parent="287" name="guide">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
     </column>
-    <column id="322" parent="287" name="name">
+    <column id="324" parent="287" name="name">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
     </column>
-    <column id="323" parent="287" name="population">
+    <column id="325" parent="287" name="population">
       <Position>4</Position>
-      <DataType>int|0s</DataType>
+      <DataType>bigint|0s</DataType>
     </column>
-    <key id="324" parent="287" name="PRIMARY">
+    <index id="326" parent="287" name="UK_lesswpo7ucchx74da42y0lv1i">
+      <ColNames>name</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <key id="327" parent="287" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
+    </key>
+    <key id="328" parent="287" name="UK_lesswpo7ucchx74da42y0lv1i">
+      <ColNames>name</ColNames>
+      <UnderlyingIndexName>UK_lesswpo7ucchx74da42y0lv1i</UnderlyingIndexName>
     </key>
   </database-model>
 </dataSource>

@@ -10,6 +10,9 @@ import softuni.exam.util.ValidationUtilImpl;
 import softuni.exam.xmls.XmlParser;
 import softuni.exam.xmls.XmlParserImpl;
 
+import javax.validation.Validation;
+import javax.validation.Validator;
+
 @Configuration
 public class ApplicationBeanConfiguration {
 
@@ -22,8 +25,13 @@ public class ApplicationBeanConfiguration {
     }
 
     @Bean
+    public Validator validator() {
+        return Validation.buildDefaultValidatorFactory().getValidator();
+    }
+
+    @Bean
     public ValidationUtil validationUtil() {
-        return new ValidationUtilImpl();
+        return new ValidationUtilImpl(validator());
     }
 
     @Bean

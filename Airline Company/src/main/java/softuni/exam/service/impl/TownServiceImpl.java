@@ -10,8 +10,6 @@ import softuni.exam.repository.TownRepository;
 import softuni.exam.service.TownService;
 import softuni.exam.util.ValidationUtil;
 
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -45,16 +43,16 @@ public class TownServiceImpl implements TownService {
     }
 
     @Override
-    public String importTowns() throws FileNotFoundException {
+    public String importTowns() throws IOException {
         StringBuilder sb = new StringBuilder();
-        TownDto[] townDtos = this.gson.fromJson(new FileReader(TOWN_PATH), TownDto[].class);
+        TownDto[] townDtos = this.gson.fromJson(this.readTownsFileContent(), TownDto[].class);
+
         for (TownDto townDto : townDtos) {
             if (this.validationUtil.isValid(townDto)) {
-
                     this.townRepository.saveAndFlush(this.modelMapper.map(townDto, Town.class));
 
-                    sb.append(String.format("Successfully imported Town %s - %d"
-                            , townDto.getName(), townDto.getPopulation()))
+                    sb.append(String.format("Successfully imported Town %s - %d",
+                            townDto.getName(), townDto.getPopulation()))
                             .append(System.lineSeparator());
             } else {
                 sb.append("Invalid Town")
@@ -63,5 +61,10 @@ public class TownServiceImpl implements TownService {
             }
         }
         return sb.toString();
+    }
+
+    @Override
+    public Town getTownByName(String town) {
+        return this.townRepository.findByName(town);
     }
 }

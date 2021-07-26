@@ -1,6 +1,8 @@
 package softuni.exam.service;
 
 
+import softuni.exam.models.Town;
+
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
@@ -11,5 +13,8 @@ public interface TownService {
 
     String readTownsFileContent() throws IOException;
 	
-	String importTowns() throws FileNotFoundException;
+	String importTowns() throws IOException;
+
+    Town getTownByName(String town);
+
 }
