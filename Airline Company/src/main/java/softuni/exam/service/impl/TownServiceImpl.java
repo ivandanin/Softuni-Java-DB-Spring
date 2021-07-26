@@ -5,7 +5,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import softuni.exam.models.Town;
-import softuni.exam.models.dtos.TownDto;
+import softuni.exam.models.dtos.jsons.TownDto;
 import softuni.exam.repository.TownRepository;
 import softuni.exam.service.TownService;
 import softuni.exam.util.ValidationUtil;
@@ -64,7 +64,7 @@ public class TownServiceImpl implements TownService {
     }
 
     @Override
-    public Town getTownByName(String town) {
+    public Town findByName(String town) {
         return this.townRepository.findByName(town);
     }
 }

@@ -15,6 +15,6 @@ public interface TownService {
 	
 	String importTowns() throws IOException;
 
-    Town getTownByName(String town);
+    Town findByName(String town);
 
 }

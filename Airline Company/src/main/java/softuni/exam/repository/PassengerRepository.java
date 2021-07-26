@@ -10,3 +10,4 @@ public interface PassengerRepository extends JpaRepository<Passenger, Integer> {
 
     Passenger findByEmail(String email);
 }
+

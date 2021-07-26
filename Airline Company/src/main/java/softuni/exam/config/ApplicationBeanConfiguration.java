@@ -7,8 +7,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import softuni.exam.util.ValidationUtil;
 import softuni.exam.util.ValidationUtilImpl;
-import softuni.exam.xmls.XmlParser;
-import softuni.exam.xmls.XmlParserImpl;
+import softuni.exam.util.XmlParser;
+import softuni.exam.util.XmlParserImpl;
 
 import javax.validation.Validation;
 import javax.validation.Validator;
@@ -40,8 +40,9 @@ public class ApplicationBeanConfiguration {
     }
 
     @Bean
-    public XmlParser xmlParser(){
+    public XmlParser xmlParser() {
         return new XmlParserImpl();
     }
+
 
 }

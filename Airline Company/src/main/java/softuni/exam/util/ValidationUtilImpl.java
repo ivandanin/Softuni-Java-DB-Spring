@@ -1,12 +1,15 @@
 package softuni.exam.util;
 
+import javax.validation.Validation;
 import javax.validation.Validator;
 
 public class ValidationUtilImpl implements ValidationUtil {
 
     private final Validator validator;
     public ValidationUtilImpl(Validator validator) {
-        this.validator = validator;
+        this.validator = Validation
+                .buildDefaultValidatorFactory()
+                .getValidator();;
     }
 
 
