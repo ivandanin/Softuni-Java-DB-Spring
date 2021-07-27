@@ -1,6 +1,7 @@
 package softuni.exam.models.dtos.jsons;
 
 import com.google.gson.annotations.Expose;
+import org.hibernate.validator.constraints.Length;
 
 import javax.validation.constraints.Min;
 import javax.validation.constraints.Pattern;
@@ -22,7 +23,7 @@ public class PassengerDto {
     public PassengerDto() {
     }
 
-    @Min(2)
+    @Length(min = 2)
     public String getFirstName() {
         return firstName;
     }
@@ -31,7 +32,7 @@ public class PassengerDto {
         this.firstName = firstName;
     }
 
-    @Min(2)
+    @Length(min = 2)
     public String getLastName() {
         return lastName;
     }
@@ -40,7 +41,7 @@ public class PassengerDto {
         this.lastName = lastName;
     }
 
-    @Min(0)
+    @Min(value = 0)
     public Integer getAge() {
         return age;
     }

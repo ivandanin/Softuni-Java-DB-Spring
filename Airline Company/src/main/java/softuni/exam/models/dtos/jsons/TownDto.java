@@ -26,7 +26,7 @@ public class TownDto {
         this.name = name;
     }
 
-    @Min(0)
+    @Min(value = 0)
     public Long getPopulation() {
         return population;
     }

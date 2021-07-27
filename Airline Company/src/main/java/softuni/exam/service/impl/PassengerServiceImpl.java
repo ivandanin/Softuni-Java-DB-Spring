@@ -79,4 +79,9 @@ public class PassengerServiceImpl implements PassengerService {
     public String getPassengersOrderByTicketsCountDescendingThenByEmail() {
         return null;
     }
+
+    @Override
+    public Passenger findByEmail(String email) {
+        return this.passengerRepository.findByEmail(email);
+    }
 }

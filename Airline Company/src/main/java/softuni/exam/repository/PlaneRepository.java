@@ -8,4 +8,5 @@ import softuni.exam.models.Plane;
 @Repository
 public interface PlaneRepository extends JpaRepository<Plane, Integer> {
 
+    Plane findByRegisterNumber(String registerNumber);
 }
