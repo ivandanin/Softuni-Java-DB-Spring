@@ -10,7 +10,7 @@ import java.util.Set;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class TicketRootDto {
 
-    @XmlElement
+    @XmlElement(name = "ticket")
     private Set<TicketDto> tickets;
 
     public TicketRootDto() {

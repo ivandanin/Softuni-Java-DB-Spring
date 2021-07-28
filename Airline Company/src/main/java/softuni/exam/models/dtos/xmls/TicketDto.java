@@ -1,8 +1,6 @@
 package softuni.exam.models.dtos.xmls;
 
 import org.hibernate.validator.constraints.Length;
-import softuni.exam.models.dtos.jsons.PassengerDto;
-import softuni.exam.models.dtos.jsons.TownDto;
 
 import javax.validation.constraints.DecimalMin;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -22,12 +20,12 @@ public class TicketDto {
     @XmlElement(name = "take-off")
     private String takeoff;
     @XmlElement(name = "from-town")
-    private TownDto fromTown;
+    private TownXMLDto fromTown;
     @XmlElement(name = "to-town")
-    private TownDto toTown;
-    @XmlElement
-    private PassengerDto passengerDto;
-    @XmlElement
+    private TownXMLDto toTown;
+    @XmlElement(name = "passenger")
+    private PassengerXMLDto passengerDto;
+    @XmlElement(name = "plane")
     private PlaneDto planeDto;
 
     public TicketDto() {
@@ -59,27 +57,27 @@ public class TicketDto {
         this.takeoff = takeoff;
     }
 
-    public TownDto getFromTown() {
+    public TownXMLDto getFromTown() {
         return fromTown;
     }
 
-    public void setFromTown(TownDto fromTown) {
+    public void setFromTown(TownXMLDto fromTown) {
         this.fromTown = fromTown;
     }
 
-    public TownDto getToTown() {
+    public TownXMLDto getToTown() {
         return toTown;
     }
 
-    public void setToTown(TownDto toTown) {
+    public void setToTown(TownXMLDto toTown) {
         this.toTown = toTown;
     }
 
-    public PassengerDto getPassengerDto() {
+    public PassengerXMLDto getPassengerDto() {
         return passengerDto;
     }
 
-    public void setPassengerDto(PassengerDto passengerDto) {
+    public void setPassengerDto(PassengerXMLDto passengerDto) {
         this.passengerDto = passengerDto;
     }
 

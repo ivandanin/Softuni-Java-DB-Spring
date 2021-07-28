@@ -61,19 +61,25 @@ public class TicketServiceImpl implements TicketService {
 
         for (TicketDto ticketDto : ticketRootDtos.getTickets()) {
             if (this.validationUtil.isValid(ticketDto)) {
-                Ticket ticket = this.modelMapper.map(ticketDto, Ticket.class);
 
-                ticket.setTakeoff(LocalDateTime.parse(ticketDto.getTakeoff(), DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
-                ticket.setFromTown(this.townRepository.findByName(ticketDto.getFromTown().getName()));
-                ticket.setToTown(this.townRepository.findByName(ticketDto.getToTown().getName()));
-                ticket.setPassenger(this.passengerRepository.findByEmail(ticketDto.getPassengerDto().getEmail()));
-                ticket.setPlane(this.planeRepository.findByRegisterNumber(ticket.getPlane().getRegisterNumber()));
+                if (this.ticketRepository.findBySerialNumber(ticketDto.getSerialNumber()) == null) {
+                    Ticket ticket = this.modelMapper.map(ticketDto, Ticket.class);
 
-                this.ticketRepository.saveAndFlush(ticket);
+                    ticket.setTakeoff(LocalDateTime.parse(ticketDto.getTakeoff(), DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
+                    ticket.setFromTown(this.townRepository.findByName(ticketDto.getFromTown().getName()));
+                    ticket.setToTown(this.townRepository.findByName(ticketDto.getToTown().getName()));
+                    ticket.setPassenger(this.passengerRepository.findByEmail(ticketDto.getPassengerDto().getEmail()));
+                    ticket.setPlane(this.planeRepository.findByRegisterNumber(ticket.getPlane().getRegisterNumber()));
 
-                sb.append(String.format("Successfully imported Ticket %s - %s",
-                        ticketDto.getFromTown().getName(), ticketDto.getToTown().getName()))
-                        .append(System.lineSeparator());
+                    this.ticketRepository.saveAndFlush(ticket);
+
+                    sb.append(String.format("Successfully imported Ticket %s - %s",
+                            ticketDto.getFromTown().getName(), ticketDto.getToTown().getName()))
+                            .append(System.lineSeparator());
+                } else {
+                    sb.append("Invalid Ticket")
+                            .append(System.lineSeparator());
+                }
             } else {
                 sb.append("Invalid Ticket")
                         .append(System.lineSeparator());

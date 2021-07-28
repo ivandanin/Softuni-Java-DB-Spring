@@ -8,4 +8,5 @@ import softuni.exam.models.Ticket;
 @Repository
 public interface TicketRepository extends JpaRepository<Ticket, Integer> {
 
+    Ticket findBySerialNumber(String serialNumber);
 }
