@@ -1,14 +1,11 @@
-package softuni.exam.instagraphlite.config;
+package softuni.exam.config;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import softuni.exam.util.ValidationUtil;
-import softuni.exam.util.ValidationUtilImpl;
-import softuni.exam.util.XmlParser;
-import softuni.exam.util.XmlParserImpl;
+import softuni.exam.util.*;
 
 import javax.validation.Validation;
 import javax.validation.Validator;
@@ -17,11 +14,13 @@ import javax.validation.Validator;
 public class ApplicationBeanConfiguration {
 
     @Bean
+    public FileUtil fileUtil() {
+        return new FileUtilImpl();
+    }
+
+    @Bean
     public Gson gson() {
-        return new GsonBuilder()
-                .excludeFieldsWithoutExposeAnnotation()
-                .setPrettyPrinting()
-                .create();
+        return new GsonBuilder().excludeFieldsWithoutExposeAnnotation().setPrettyPrinting().create();
     }
 
     @Bean
@@ -30,8 +29,8 @@ public class ApplicationBeanConfiguration {
     }
 
     @Bean
-    public ValidationUtil validationUtil() {
-        return new ValidationUtilImpl(validator());
+    public ValidatorUtil validationUtil() {
+        return new ValidatorUtilImpl(validator());
     }
 
     @Bean
@@ -40,9 +39,5 @@ public class ApplicationBeanConfiguration {
     }
 
     @Bean
-    public XmlParser xmlParser() {
-        return new XmlParserImpl();
-    }
-
-
+    public XmlParser xmlParser() {return new XmlParserImpl();}
 }
